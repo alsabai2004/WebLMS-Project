@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Language" content="en">
-    <meta name="description" content="Learning Management System made with Laravel Framework">
+    <meta name="description" content="WebLMS - Web Learning Management System">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 
