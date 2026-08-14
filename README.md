@@ -1,23 +1,23 @@
-# laravel-lms
+# WebLMS
 
-Laravel-lms is a powerful and intuitive Learning Management System built using the Laravel PHP framework. It provides a comprehensive platform for managing students, administrators, courses, lessons, reviews, and enrollments efficiently.
+WebLMS is a powerful and intuitive Learning Management System built using the Laravel PHP framework. It provides a comprehensive platform for managing students, administrators, courses, lessons, reviews, and enrollments efficiently.
 
 ## 🎯 Why?
 
-Managing courses and students in a learning environment can be challenging. Laravel-lms aims to simplify this process by providing a robust system for creating, organizing, and delivering courses, along with tools for managing users and tracking progress.
+Managing courses and students in a learning environment can be challenging. WebLMS aims to simplify this process by providing a robust system for creating, organizing, and delivering courses, along with tools for managing users and tracking progress.
 
 ## 🚀 Quick Start
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/danyfernandes/laravel-lms.git
+git clone https://github.com/WebLMS.git
 ```
 
 2. Navigate into the project directory:
 
 ```bash
-cd laravel-lms
+cd WebLMS
 ```
 
 3. Install dependencies via Composer:
