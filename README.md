@@ -1,83 +1,291 @@
-# WebLMS
+🎓 WebLMS
 
-WebLMS is a powerful and intuitive Learning Management System built using the Laravel PHP framework. It provides a comprehensive platform for managing students, administrators, courses, lessons, reviews, and enrollments efficiently.
+Web Learning Management System
 
-## 🎯 Why?
+WebLMS is a web-based Learning Management System built with Laravel and designed to simplify the management and delivery of online courses.
 
-Managing courses and students in a learning environment can be challenging. WebLMS aims to simplify this process by providing a robust system for creating, organizing, and delivering courses, along with tools for managing users and tracking progress.
+The platform provides separate experiences for administrators and students, with tools for managing courses, lessons, enrollments, reviews, users, and learning content.
 
-## 🚀 Quick Start
+---
 
-1. Clone the repository:
+🚀 Overview
 
-```bash
+WebLMS provides a structured environment for managing an online learning platform.
+
+The current system includes:
+
+- 👨‍💼 Administrator management
+- 👨‍🎓 Student accounts and dashboard
+- 📚 Course management
+- 📖 Lesson management
+- 📝 Course reviews
+- 🎓 Course enrollment
+- 👤 User management
+- 🔐 Authentication and account management
+- 📊 Administrative dashboard
+- 🗄️ Database migrations and seeders
+- 🧪 Automated application tests
+
+---
+
+✨ Current Features
+
+👨‍💼 Administration
+
+Administrators can:
+
+- Manage users
+- Create and manage courses
+- Create and manage lessons
+- Monitor course enrollments
+- Manage course reviews
+- Manage administrator profile
+- Access the administration dashboard
+
+👨‍🎓 Student Experience
+
+Students can:
+
+- Create an account
+- Sign in securely
+- Browse available courses
+- Enroll in courses
+- Access enrolled course content
+- View lessons
+- Submit course reviews
+- Manage their profile
+
+📚 Course Management
+
+WebLMS supports:
+
+- Course creation
+- Course editing
+- Course descriptions
+- Course thumbnails
+- Lesson organization
+- Student enrollment
+- Course reviews
+
+🔐 Authentication
+
+The application includes:
+
+- Registration
+- Login
+- Logout
+- Password reset
+- Password confirmation
+- Email verification
+- Password updates
+- Profile management
+
+---
+
+🏗️ Application Structure
+```
+WebLMS-Project/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   ├── Auth/
+│   │   │   └── Student/
+│   │   ├── Middleware/
+│   │   └── Requests/
+│   │
+│   ├── Models/
+│   ├── Policies/
+│   ├── Providers/
+│   └── View/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│
+├── routes/
+│   ├── admin.php
+│   ├── auth.php
+│   ├── student.php
+│   └── web.php
+│
+├── public/
+├── tests/
+├── composer.json
+├── package.json
+└── vite.config.js
+```
+---
+
+| Technology | Purpose |
+|---|---|
+| PHP | Backend programming |
+| Laravel | Web application framework |
+| Laravel Blade | Server-side UI |
+| Laravel Breeze | Authentication |
+| MySQL / SQLite | Database support |
+| Tailwind CSS | Interface styling |
+| JavaScript | Frontend interactions |
+| Vite | Frontend asset development |
+| PHPUnit | Application testing |
+| Composer | PHP dependency management |
+| npm | JavaScript dependency management |
+
+---
+
+🗄️ Main Data Models
+
+The current application includes the following main models:
+
+- User
+- Course
+- Lesson
+- Review
+
+The database also contains relationships for:
+
+- Course enrollments
+- Lesson access
+- Course reviews
+- User accounts
+- Course content
+
+---
+
+⚙️ Installation
+
+1. Clone the repository
+
 git clone https://github.com/alsabai2004/WebLMS-Project.git
-```
+cd WebLMS-Project
 
-2. Navigate into the project directory:
+2. Install PHP dependencies
 
-```bash
-cd WebLMS
-```
-
-3. Install dependencies via Composer:
-
-```bash
 composer install
-```
 
-4. Install JavaScript dependencies via npm:
+3. Install frontend dependencies
 
-```bash
 npm install
-```
 
-5. Create a copy of the .env.example file and rename it to .env:
+4. Create the environment file
 
-```bash
 cp .env.example .env
-```
 
-6. Generate an application key:
+5. Generate the application key
 
-```bash
 php artisan key:generate
-```
 
-7. Run migrations to create the necessary database tables:
+6. Configure the database
 
-```bash
+Update the database configuration in ".env".
+
+For SQLite, create the database file and configure:
+
+DB_CONNECTION=sqlite
+
+7. Run migrations and seeders
+
 php artisan migrate --seed
-```
 
-- A message should appear asking if you would like to create the SQLite database. Select <b>Yes</b> and continue.
+8. Build frontend assets
 
-8. Launch the Laravel Vite build process:
+For development:
 
-```bash
 npm run dev
-```
 
-9. Serve the application:
+9. Start the Laravel server
 
-```bash
 php artisan serve
-```
 
-10. Access the application in your web browser at http://localhost:8000.
+The application will be available at:
 
-## 🔧 Usage
-- Log in as an administrator to access the full functionalities of the LMS.
-    - Email: <b>admin@weblms.local</b>
-    - Password: <b>password</b>
-- Create courses and add lessons to them.
-- Assign courses to students.
-- Monitor student enrollments and reviews from the administrator dashboard.
-- Students can log in to the student panel, access their enrolled courses, access the lessons and leave reviews.
+http://localhost:8000
 
-## 👏 Contributing
+---
 
-Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
+🔑 Demo Account
 
-## 📝 License
-This project is open-sourced software licensed under the MIT license.
+The seeded administrator account is currently configured as:
+
+Email: admin@weblms.local
+Password: password
+
+«Change the default credentials before deploying WebLMS to a production environment.»
+
+---
+
+🧪 Testing
+
+Run the Laravel test suite with:
+
+php artisan test
+
+---
+
+🔒 Security
+
+WebLMS uses Laravel's built-in security mechanisms for:
+
+- Authentication
+- Password hashing
+- CSRF protection
+- Request validation
+- Authorization policies
+- Session management
+- Email verification
+
+---
+
+🗺️ Development Roadmap
+
+WebLMS is being actively developed. Planned improvements include:
+
+- [ ] Instructor / Teacher accounts
+- [ ] Instructor dashboard
+- [ ] Course progress tracking
+- [ ] Course completion tracking
+- [ ] Online quizzes
+- [ ] Questions and assessments
+- [ ] Certificates
+- [ ] Learning statistics
+- [ ] Advanced course search and filtering
+- [ ] Notifications
+- [ ] File and learning-material management
+- [ ] Improved administration dashboard
+- [ ] REST API
+- [ ] Automated CI/CD
+- [ ] Docker support
+
+---
+
+🎯 Project Goals
+
+The goal of WebLMS is to evolve into a complete and flexible learning management platform capable of supporting:
+
+Administrators → Instructors → Students → Courses → Lessons → Assessments → Progress → Certificates
+
+The project will continue to evolve through iterative development, testing, security improvements, and new educational features.
+
+---
+
+👨‍💻 Project
+
+(WebLMS) Web Learning Management System
+
+Developed and maintained by Eng\ Mohammed Najeeb Abd-Ulrazzaq Al-Sabai 
+
+GitHub :
+
+https://github.com/alsabai2004
+---
+
+📄 License
+
+See the "LICENSE" file for the licensing terms applicable to this project.
