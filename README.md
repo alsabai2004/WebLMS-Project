@@ -11,7 +11,7 @@ Managing courses and students in a learning environment can be challenging. WebL
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/WebLMS.git
+git clone https://github.com/alsabai2004/WebLMS-Project.git
 ```
 
 2. Navigate into the project directory:
@@ -68,7 +68,7 @@ php artisan serve
 
 ## 🔧 Usage
 - Log in as an administrator to access the full functionalities of the LMS.
-    - Email: <b>admin@laravel.com</b>
+    - Email: <b>admin@weblms.local</b>
     - Password: <b>password</b>
 - Create courses and add lessons to them.
 - Assign courses to students.
