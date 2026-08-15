@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "alsabai2004/weblms",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "WebLMS - Web Learning Management System",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
